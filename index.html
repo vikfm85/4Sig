@@ -27,6 +27,12 @@
 	    <link rel="stylesheet" href="leafletStyleEditor/css/Leaflet.StyleEditor.css" />
     	<script type='text/javascript' src="leafletStyleEditor/javascript/Leaflet.StyleEditor.js"></script>
 	    <script type='text/javascript' src="leafletStyleEditor/javascript/Leaflet.StyleForms.js"></script>
+	    <script src="LeafletSync/L.Map.Sync.js"></script>
+	    <link rel="stylesheet" href="LeafletLayerscontrolMinimap/control.layers.minimap.css" />
+		<script src="LeafletLayerscontrolMinimap/L.Control.Layers.Minimap.js"></script>
+		<script src="LeafletTwofingerZoom/dist/leaflet.twofingerzoom.js"></script>
+		<link rel="stylesheet" href="LeafletCompass/src/leaflet-compass.css" />
+		<script src="LeafletCompass/src/leaflet-compass.js"></script>
 
 		
 		<!-- Librerias necesarias del Plugin LeafletDraw -->
@@ -81,7 +87,9 @@
 		var osmAttrib='Map data &copy; OpenStreetMap contributors';
 		new L.control.scale({metric: true}).addTo(map);
 		new L.control.locate().addTo(map);
+		new L.Control.Compass().addTo(map);
 		new L.control.mousePosition().addTo(map);
+
 	
         var osm =   L.tileLayer(osmUrl, {
         attribution: osmAttrib});
